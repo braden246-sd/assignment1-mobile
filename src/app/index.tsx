@@ -3,12 +3,16 @@ import { Image, StyleSheet, Text, View } from "react-native";
 export default function Index() {
   return (
     <View style={styles.container}>
+      <View style = {styles.headerBar}>
+        <Text style = {styles.headerTitle}> OOTD_EVERYDAY </Text>
+        <Text style = {styles.headerPosts}>Posts</Text>
+      </View>
       <View style = {styles.header}>
         
-        <Image source = {{uri: 'https://picsum.photos/50'}}
+        <Image source = {{uri: 'https://picsum.photos/50'}} /* basic profile pic */
         style = {styles.profilePic}/>
 
-        <View style = {styles.names}>
+        <View style = {styles.names}> /* aligns text */
         <Text style = {styles.username}>ootd_everyday</Text>
         <Text style = {styles.via}>via frenchie_fry</Text>
         </View>
@@ -21,11 +25,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  headerBar: {
+    backgroundColor: '#fff',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+    alignItems: 'center',
+
+
+  },
+  headerPosts: {
+    fontWeight: 'bold',
+    fontSize: 15,
+
+  },
+  headerTitle: {},
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,
     marginBottom: 10,
+    paddingTop: 20
   },
   profilePic: {
     width: 40,
