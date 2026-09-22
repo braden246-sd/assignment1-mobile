@@ -9,13 +9,17 @@ export default function Index() {
       </View>
       <View style = {styles.header}>
         
-        <Image source = {{uri: 'https://picsum.photos/50'}} /* basic profile pic */
+        <Image source = {{uri: 'https://picsum.photos/50'}} 
         style = {styles.profilePic}/>
 
-        <View style = {styles.names}> /* aligns text */
+        <View style = {styles.names}>
         <Text style = {styles.username}>ootd_everyday</Text>
         <Text style = {styles.via}>via frenchie_fry</Text>
         </View>
+      </View>
+
+      <View style = {styles.bottomBar}>
+
       </View>
     </View>
   );
@@ -32,21 +36,28 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
     alignItems: 'center',
-
-
+  },
+  bottomBar: {
+    
   },
   headerPosts: {
     fontWeight: 'bold',
     fontSize: 15,
 
   },
-  headerTitle: {},
+  headerTitle: {
+    color: 'grey',
+  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,
     marginBottom: 10,
-    paddingTop: 20
+    paddingTop: 20,
+    paddingBottom: '10',
+    borderBottomWidth: 1,
+    borderBottomColor: '#fff7f7',
+    backgroundColor: '#fff',
   },
   profilePic: {
     width: 40,
