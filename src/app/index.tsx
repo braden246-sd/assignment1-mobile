@@ -15,12 +15,13 @@ export default function Index() {
         <View style = {styles.names}>
         <Text style = {styles.username}>ootd_everyday</Text>
         <Text style = {styles.via}>via frenchie_fry</Text>
+        <Text style = {styles.dots}>...</Text>
         </View>
       </View>
 
-      <View style = {styles.bottomBar}>
+      <Image source = {{uri: 'https://picsum.photos/450'}} //random image that is 450x450
+      style = {styles.mainImage}/>
 
-      </View>
     </View>
   );
 }
@@ -28,6 +29,12 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+
+  mainImage: {
+    height: 450,
+    width: 450,
+
   },
   headerBar: {
     backgroundColor: '#fff',
@@ -54,7 +61,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     marginBottom: 10,
     paddingTop: 20,
-    paddingBottom: '10',
+    paddingBottom: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#fff7f7',
     backgroundColor: '#fff',
