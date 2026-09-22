@@ -14,8 +14,8 @@ export default function Index() {
 
         <View style = {styles.names}>
         <Text style = {styles.username}>ootd_everyday</Text>
-        <Text style = {styles.via}>via frenchie_fry</Text>
-        <Text style = {styles.dots}>...</Text>
+        <Text style = {styles.via}>via frenchie_fry39</Text>
+        
         </View>
       </View>
 
