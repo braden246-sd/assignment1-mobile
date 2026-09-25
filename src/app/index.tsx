@@ -188,4 +188,25 @@ const styles = StyleSheet.create({
     opacity: 0.8,
     transform: [{ scale: 0.9 }],
   },
+      <View style={styles.captionSection}>
+        <Text style={styles.likedBy}>
+          Liked by <Text style={styles.bold}>paisley.print.48</Text> and{" "}
+          <Text style={styles.bold}>7 others</Text>
+        </Text>
+
+        <Text style={styles.caption}>
+          <Text style={styles.bold}>frenchie_fry39</Text> Fresh shot on a sunny day! ☀️
+        </Text>
+
+        <Text style={styles.viewComments}>View all 12 comments</Text>
+
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>lil_wyatt838</Text> Awesome tones
+        </Text>
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>pia.in.a.pod</Text> Gorg. Love it! ❤️
+        </Text>
+
+        <Text style={styles.timestamp}>1 day ago</Text>
+      </View>
 });
