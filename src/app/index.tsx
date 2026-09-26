@@ -33,7 +33,7 @@ export default function Index() {
         <View style={styles.names}>
           <Text style={styles.username}>ootd_everyday</Text>
           <Text style={styles.via}>via frenchie_fry</Text>
-          <Text style={styles.dots}>...</Text>
+          <Text>...</Text>
         </View>
       </View>
 
@@ -72,6 +72,28 @@ export default function Index() {
           source={require("../../assets/images/tabIcons/save.png")}
           style={[styles.icons, { marginLeft: 260 }]}
         />
+      </View>
+
+      <View style={styles.captionSection}>
+        <Text style={styles.likedBy}>
+          Liked by <Text style={styles.bold}>paisley.print.48</Text> and{" "}
+          <Text style={styles.bold}>7 others</Text>
+        </Text>
+
+        <Text style={styles.caption}>
+          <Text style={styles.bold}>frenchie_fry39</Text> Fresh shot on a sunny day! ☀️
+        </Text>
+
+        <Text style={styles.viewComments}>View all 12 comments</Text>
+
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>lil_wyatt838</Text> Awesome tones
+        </Text>
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>pia.in.a.pod</Text> Gorg. Love it! ❤️
+        </Text>
+
+        <Text style={styles.timestamp}>1 day ago</Text>
       </View>
 {/* Alert Button */}
       <View>
@@ -211,6 +233,8 @@ const styles = StyleSheet.create({
     transform: [{ scale: 0.9 }],
   },
 
+  
+
   addButton: {
     backgroundColor: "#2563EB",
     padding: 12,
@@ -225,6 +249,50 @@ const styles = StyleSheet.create({
   addButtonText: {
     color: "#FFFFFF",
     fontWeight: "600",
-  }
+  },
+
+  captionSection: {
+  paddingHorizontal: 15,
+  paddingTop: 8,
+  paddingBottom: 12,
+  backgroundColor: "#fff",
+},
+
+likedBy: {
+  fontSize: 14,
+  color: "#000",
+  marginBottom: 6,
+},
+
+caption: {
+  fontSize: 14,
+  color: "#000",
+  lineHeight: 18,
+  marginBottom: 6,
+},
+
+bold: {
+  fontWeight: "600",
+},
+
+viewComments: {
+  fontSize: 14,
+  color: "#8e8e8e",
+  marginBottom: 6,
+},
+
+comment: {
+  fontSize: 14,
+  color: "#000",
+  lineHeight: 18,
+  marginBottom: 3,
+},
+
+timestamp: {
+  fontSize: 12,
+  color: "#8e8e8e",
+  marginTop: 6,
+  textTransform: "uppercase",
+},
 
 });
