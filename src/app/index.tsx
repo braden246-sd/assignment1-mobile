@@ -3,11 +3,18 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   const [liked, setLiked] = useState(false);
+  const [alert, setAlert] = useState(false);
 
   function handleliked() {
     console.log("liked");
     setLiked(true);
     setTimeout(() => setLiked(false), 5000);
+  }
+
+  function handleAlert() {
+    console.log("Alerted");
+    setAlert(true);
+    setTimeout(() => setAlert(false), 5000);
   }
 
   return (
@@ -65,6 +72,21 @@ export default function Index() {
           source={require("../../assets/images/tabIcons/save.png")}
           style={[styles.icons, { marginLeft: 260 }]}
         />
+      </View>
+{/* Alert Button */}
+      <View>
+
+        <Pressable
+        onPress={handleAlert}
+        accessibilityRole="button"
+        style={({ pressed }) => [
+          styles.addButton,
+          pressed && styles.addButtonPressed,
+        ]}
+      >
+        <Text style={styles.addButtonText}>Alert</Text>
+      </Pressable>
+      {alert && <Text>Alerted!</Text>},
       </View>
 
       <View style={styles.bottomBarIcons}>
@@ -187,4 +209,21 @@ const styles = StyleSheet.create({
     opacity: 0.8,
     transform: [{ scale: 0.9 }],
   },
+
+  addButton: {
+    backgroundColor: "#2563EB",
+    padding: 12,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+
+  addButtonPressed: {
+    backgroundColor: "#0A5F5E", // darker shade, shown only while held
+  },
+
+  addButtonText: {
+    color: "#FFFFFF",
+    fontWeight: "600",
+  }
+
 });
