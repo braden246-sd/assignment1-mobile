@@ -38,7 +38,7 @@ export default function Index() {
       </View>
 
       <Image
-        source={{ uri: "https://picsum.photos/450" }} //random image that is 450x450
+        source={{ uri: "https://picsum.photos/450" }} 
         style={styles.mainImage}
       />
 
@@ -97,7 +97,6 @@ export default function Index() {
       </View>
 {/* Alert Button */}
       <View>
-
         <Pressable
         onPress={handleAlert}
         accessibilityRole="button"
@@ -137,11 +136,13 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+     backgroundColor: "#fff",
   },
 
   mainImage: {
-    height: 450,
+    height: 370,
     width: 450,
+    
   },
 
   icons: {
